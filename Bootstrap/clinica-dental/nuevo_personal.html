@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modernize Free</title>
+  <link rel="shortcut icon" type="image/png" href="assets/images/logos/favicon.png" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="assets/css/styles.min.css" />
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <a href="./dashboard.html" class="text-nowrap logo-img">
+            <img src="assets/images/logos/logo.gif" width="180" alt="" />
+          </a>
+          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <i class="ti ti-x fs-8"></i>
+          </div>
+        </div>
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+          <ul id="sidebarnav">
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Inicio</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./dashboard.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Navegación</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./nuevo_personal.html" aria-expanded="false">
+                <span>
+                  <img src="assets/images/iconos/personal.png" alt="">
+                </span>
+                <span class="hide-menu">Personal</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./nuevo_paciente.html" aria-expanded="false">
+                <span>
+                  <img src="assets/images/iconos/pacientes.png" alt="">
+                </span>
+                <span class="hide-menu">Paciente</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./citas_medicas.html" aria-expanded="false">
+                <span>
+                  <img src="assets/images/iconos/calendario.png" alt="">
+                </span>
+                <span class="hide-menu">Citas Médicas</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./ordenes_medicas.html" aria-expanded="false">
+                <span>
+                  <img src="assets/images/iconos/ordenado.png" alt="">
+                </span>
+                <span class="hide-menu">Ordenes Médicas</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./recetas.html" aria-expanded="false">
+                <span>
+                  <img src="assets/images/iconos/receta.png" alt="">
+                </span>
+                <span class="hide-menu">Receta Medica</span>
+              </a>
+            </li>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Cerrar Sesión</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="./login.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-login"></i>
+                </span>
+                <span class="hide-menu">Cerrar Sesión</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+      <!--  Header Start -->
+      <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <ul class="navbar-nav">
+            <li class="nav-item d-block d-xl-none">
+              <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                <i class="ti ti-bell-ringing"></i>
+                <div class="notification bg-primary rounded-circle"></div>
+              </a>
+            </li>
+          </ul>
+          <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+            <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+              <li class="nav-item dropdown">
+                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <img src="assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                  <div class="message-body">
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-user fs-6"></i>
+                      <p class="mb-0 fs-3">Mi Perfil</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-mail fs-6"></i>
+                      <p class="mb-0 fs-3">Mi Cuenta</p>
+                    </a>
+                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                      <i class="ti ti-list-check fs-6"></i>
+                      <p class="mb-0 fs-3">Mis tareas</p>
+                    </a>
+                    <a href="./login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Cerrar Sesión</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--  Header End -->
+      <div class="container-fluid">
+        <div class="card">
+          <div class="card-body">
+            <div class="table-responsive-md">
+              <div class="row">
+                <div class="col-md-6 d-flex justify-content-start">
+                  <h1 class="fw-semibold mb-4 text-primary">Personal</h1>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                  <button type="button" class="btn btn-success mb-5" data-bs-toggle="modal" data-bs-target="#agregarModal">
+                    Agregar
+                  </button>
+                </div>
+              </div>
+              <table id="table" class="table table-striped">
+                  <thead>
+                      <tr>
+                          <th>#</th>
+                          <th>Nombre y Apellido</th>
+                          <th>N° Documento</th>
+                          <th>Especialidad</th>
+                          <th>Teléfono</th>
+                          <th>Dirección</th>
+                          <th>Acciones</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Pedro Perez</td>
+                        <td>1100693000</td>
+                        <td>Medicina General</td>
+                        <td>3001535456</td>
+                        <td>Cr15 #52H - 50</td>
+                        <td><button class="btn btn-primary btn-sm">Editar</button> <button class="btn btn-danger btn-sm">Inactivar</button></td>
+                        
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Maria Gomez</td>
+                        <td>1120693330</td>
+                        <td>Cardiología</td>
+                        <td>3001535457</td>
+                        <td>Cr16 #53H - 51</td>
+                        <td><button class="btn btn-primary btn-sm">Editar</button> <button class="btn btn-danger btn-sm">Inactivar</button></td>
+                      </tr>
+                      <tr>
+                         <td>3</td>
+                         <td>Juan Rodriguez</td>
+                         <td>1103693130</td>
+                         <td>Dermatología</td>
+                         <td>3001535458</td>
+                         <td>Cr17 #54H - 52</td>
+                         <td><button class="btn btn-primary btn-sm">Editar</button> <button class="btn btn-danger btn-sm">Inactivar</button></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Luisa Fernandez</td>
+                        <td>1104453023</td>
+                        <td>Ginecología</td>
+                        <td>3001535459</td>
+                        <td>Cr18 #55H - 53</td>
+                        <td><button class="btn btn-primary btn-sm">Editar</button> <button class="btn btn-danger btn-sm">Inactivar</button></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Carlos Martinez</td>
+                        <td>55306266</td>
+                        <td>Pediatría</td>
+                        <td>3001535460</td>
+                        <td>Cr19 #56H - 54</td>
+                        <td><button class="btn btn-primary btn-sm">Editar</button> <button class="btn btn-danger btn-sm">Inactivar</button></td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>Laura Sanchez</td>
+                        <td>77558964</td>
+                        <td>Psiquiatría</td>
+                        <td>3001535461</td>
+                        <td>Cr20 #57H - 55</td>
+                        <td><button class="btn btn-primary btn-sm">Editar</button> <button class="btn btn-danger btn-sm">Inactivar</button></td>
+                      </tr>
+                      <tr>
+                        <td>7</td>
+                        <td>Andres Rios</td>
+                        <td>99547576</td>
+                        <td>Oftalmología</td>
+                        <td>3001535462</td>
+                        <td>Cr21 #58H - 56</td>
+                        <td><button class="btn btn-primary btn-sm">Editar</button> <button class="btn btn-danger btn-sm">Inactivar</button></td>
+                      </tr>
+                      <tr>
+                        <td>8</td>
+                        <td>Valeria Diaz</td>
+                        <td>1100557869</td>
+                        <td>Neurología</td>
+                        <td>3001535463</td>
+                        <td>Cr22 #59H - 57</td>
+                        <td><button class="btn btn-primary btn-sm">Editar</button> <button class="btn btn-danger btn-sm">Inactivar</button></td>
+                      </tr>
+                      <tr>
+                        <td>9</td>
+                        <td>Santiago Jimenez</td>
+                        <td>1123557689</td>
+                        <td>Traumatología</td>
+                        <td>3001535464</td>
+                        <td>Cr23 #60H - 58</td>
+                        <td><button class="btn btn-primary btn-sm">Editar</button> <button class="btn btn-danger btn-sm">Inactivar</button></td>
+                      </tr>
+                      <tr>
+                        <td>10</td>
+                        <td>Ana Torres</td>
+                        <td>22557755</td>
+                        <td>Medicina General</td>
+                        <td>3001535465</td>
+                        <td>Cr24 #61H - 59</td>
+                        <td><button class="btn btn-primary btn-sm">Editar</button> <button class="btn btn-danger btn-sm">Inactivar</button></td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td>Cristian Rondon</td>
+                        <td>22554568</td>
+                        <td>Cardiología</td>
+                        <td>3001535466</td>
+                        <td>Cr25 #62H - 60</td>
+                        <td><button class="btn btn-primary btn-sm">Editar</button> <button class="btn btn-danger btn-sm">Inactivar</button></td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="agregarModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row mb-3">
+                  <h5 class="card-title fw-semibold mb-4 text-primary">Nuevo personal</h5>
+                  <div class="col-sm-12 col-md-6">
+                    <label for="primer-nombre" class="form-label">Primer nombre*</label>
+                    <input type="text" class="form-control" id="primer-nombre" placeholder="Primer nombre" required>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <label for="segundo-nombre" class="form-label">Segundo nombre</label>
+                    <input type="text" class="form-control" id="segundo-nombre" placeholder="Segundo nombre">
+                  </div>
+                </div>
+        
+              <!-- Apellidos -->
+                <div class="row mb-3">
+                  <div class="col-sm-12 col-md-6">
+                    <label for="primer-apellido" class="form-label">Primer apellido*</label>
+                    <input type="text" class="form-control" id="primer-apellido" placeholder="Primer apellido" required>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <label for="segundo-apellido" class="form-label">Segundo apellido</label>
+                    <input type="text" class="form-control" id="segundo-apellido" placeholder="Segundo apellido">
+                  </div>
+                </div>
+        
+              <!-- Documentos -->
+                <div class="mb-3">
+                  <label for="tipo-documento" class="form-label">Tipo de documento*</label>
+                  <select class="form-select" id="tipo-documento" required>
+                    <option selected disabled>- Seleccionar -</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="TI">Tarjeta de Identidad</option>
+                    <option value="CE">Cédula de Extranjería</option>
+                    <option value="PA">Pasaporte</option>
+                  </select>
+                </div>
+        
+              <div class="mb-3">
+                  <label for="numero-documento" class="form-label">No. de Documento*</label>
+                  <input type="text" class="form-control" id="numero-documento" placeholder="Número de Documento" required>
+                </div>
+        
+              <div class="mb-3">
+                  <label for="numero-registro-medico" class="form-label">Número de Registro Médico</label>
+                  <input type="text" class="form-control" id="numero-registro-medico" placeholder="Número de Registro Médico" required>
+                </div>
+        
+              <!-- Especialidad -->
+                <div class="mb-3">
+                  <label for="especialidad" class="form-label">Especialidad*</label>
+                  <select class="form-select" id="especialidad" required>
+                    <option selected disabled>- Seleccionar -</option>
+                    <option value="Medicina General">Medicina General</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Dermatología">Dermatología</option>
+                    <option value="Ginecología">Ginecología</option>
+                    <option value="Pediatría">Pediatría</option>
+                    <option value="Psiquiatría">Psiquiatría</option>
+                    <option value="Oftalmología">Oftalmología</option>
+                    <option value="Neurología">Neurología</option>
+                    <option value="Traumatología">Traumatología</option>
+                    <!-- Agregar más especialidades según sea necesario -->
+                  </select>
+                </div>
+        
+              <!-- Residencia -->
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="departamento" class="form-label">Departamento donde reside*</label>
+                    <select class="form-select" id="departamento" required>
+                      <option selected disabled>- Seleccionar -</option>
+                      <option value="Antioquia">Antioquia</option>
+                      <option value="Bogotá">Bogotá</option>
+                      <option value="Cundinamarca">Cundinamarca</option>
+                      <!-- Agregar más opciones según sea necesario -->
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="ciudad" class="form-label">Ciudad donde reside*</label>
+                    <input type="text" class="form-control" id="ciudad" placeholder="Ciudad" required>
+                  </div>
+                </div>
+        
+              <div class="mb-3">
+                  <label for="direccion" class="form-label">Dirección donde reside*</label>
+                  <input type="text" class="form-control" id="direccion" placeholder="Dirección" required>
+                </div>
+        
+              <!-- Teléfonos -->
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" placeholder="Teléfono">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="celular" class="form-label">Celular*</label>
+                    <input type="tel" class="form-control" id="celular" placeholder="Celular" required>
+                  </div>
+                </div>
+        
+              <!-- Correos Electrónicos -->
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo Electrónico*</label>
+                  <input type="email" class="form-control" id="email" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="mb-3">
+                  <label for="confirmar-email" class="form-label">Confirmar Correo Electrónico*</label>
+                  <input type="email" class="form-control" id="confirmar-email" placeholder="confirmar correo@ejemplo.com" required>
+                </div>
+        
+              <!-- Sexo -->
+                <div class="mb-3">
+                  <label for="sexo" class="form-label">Sexo*</label>
+                  <select class="form-select" id="sexo" required>
+                    <option selected disabled>- Seleccionar -</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                  </select>
+                </div>
+        
+              <!-- Grupo Sanguíneo -->
+                <div class="mb-3">
+                  <label for="grupo-sanguineo" class="form-label">Grupo Sanguíneo*</label>
+                  <select class="form-select" id="grupo-sanguineo" required>
+                    <option selected disabled>- Seleccionar -</option>
+                    <option value="A+">A+</option>            
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                  </select>
+                </div>
+        
+              <!-- Adjuntar documento de identidad -->
+                <div class="mb-3">
+                  <label for="documento-identidad" class="form-label">Adjuntar documento de identidad*</label>
+                  <input class="form-control" type="file" id="documento-identidad" accept=".txt,.rtf,.pdf,.doc,.docx,.odt,.ppt,.pptx,.odp,.xls,.xlsx,.ods,.jpg" required>
+                  <div class="form-text">Máximo 1 fichero, límite de 25 MB, tipos permitidos: txt, rtf, pdf, doc, docx, odt, ppt, pptx, odp, xls, xlsx, ods, jpg.</div>
+                </div>
+        
+              <!-- Autorización de tratamientos de datos -->
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="autorizacion-datos" required>
+                  <label class="form-check-label" for="autorizacion-datos">Acepto el tratamiento y la Política de Protección de Datos Personales Servicios</label>
+                </div>
+        
+              <!-- Botón de envío -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <script src="assets/js/sidebarmenu.js"></script>
+  <script src="assets/js/app.min.js"></script>
+  <script src="assets/libs/simplebar/dist/simplebar.js"></script>
+</body>
+
+</html>
